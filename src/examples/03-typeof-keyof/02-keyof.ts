@@ -37,3 +37,25 @@ type CustomRequiredConfig<T> = {
 };
 
 type Config3 = CustomRequiredConfig<Config2>;
+
+type CustomReadonlyConfig<T> = {
+  readonly [K in keyof T]: T[K];
+};
+
+interface Person {
+  name: string;
+  age: number;
+  address: string;
+}
+
+type NameAndAge = Pick<Person, 'name' | 'age'>;
+// Równoważne z: { name: string; age: number; }
+
+type CustomPick<T, K extends keyof T> = {
+  // 1) P = name, K = name | age
+  // 2) P = age, K = name | age
+  // 3) P = address, K = name | age
+  [P in keyof T as P extends K ? P : never]: T[P];
+};
+
+type MyCustomPick = CustomPick<Person, 'address' | 'age'>;
