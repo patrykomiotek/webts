@@ -45,7 +45,8 @@
     "e-13-01-r": "tsx src/examples/13-project/01-safe-api-client.ts",
     "e-13-02-r": "tsx src/examples/13-project/02-pizza-delivery.ts",
     "e-13-04-r": "tsx src/examples/13-project/04-state-manager.ts",
-    "e-10-00-r": "tsx src/examples/10-as-const/00-examples.ts"
+    "e-10-00-r": "tsx src/examples/10-as-const/00-examples.ts",
+    "animals": "tsx src/snippets/animals.ts"
   },
   "repository": {
     "type": "git",
@@ -72,6 +73,7 @@
     "prettier": "^3.3.3",
     "rimraf": "^6.0.1",
     "tailwindcss": "^3.4.10",
+    "ts-node": "^10.9.2",
     "tsx": "^4.19.2",
     "typescript": "^5.5.4",
     "vite": "^5.4.2",
@@ -86,7 +88,6 @@
     "pino": "^9.5.0",
     "pino-pretty": "^13.0.0",
     "reflect-metadata": "^0.2.2",
-    "ts-node": "^10.9.2",
     "uuid": "^10.0.0",
     "zod": "^3.23.8"
   }
