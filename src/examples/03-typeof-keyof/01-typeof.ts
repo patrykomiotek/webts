@@ -10,5 +10,5 @@ const myConfig: Config = {
   timeout: 5000,
 };
 
-// @ts-expect-error
+// @ts-expect-error - only for workshops :)
 myConfig.apiUrl = 'https://evil.com';
